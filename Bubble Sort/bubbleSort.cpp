@@ -3,7 +3,7 @@
 // Towar posiada id, wage i nazwe.
 // Sortowanie glupie babelkowe.
 // Jest zlym algorytmem sortujacym powy¿ej 5000 produktów
-// optymistycznie O(n), pesymistycznie O(n^2)
+// optymistycznie / pesymistycznie O(n^2)
 
 //DZIALANIE
 // jesli przegladana para jest zlej kolejnosci, zamien miejscami i rozpocznij od nowa.
