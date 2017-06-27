@@ -6,7 +6,7 @@
 // optymistycznie / pesymistycznie O(n^2)
 
 //DZIALANIE
-// jesli przegladana para jest zlej kolejnosci, zamien miejscami i rozpocznij od nowa.
+// jesli przegladana para jest zlej kolejnosci, zamien miejscami i kontynuuj 
 
 #include <iostream>
 #include <vector>
