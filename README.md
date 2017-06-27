@@ -6,8 +6,11 @@ Repozytorium o sortowaniu
 
 ### How do I get set up? ###
 Mamy klasę Product, która zawiera 3 pola klasy: id, waga, nazwa
-
 Celem jest zbadanie działania różnych algorytmów sortowania.
+
+Zbadane algorytmy:
+
+1. Głupie sortowanie bąbelkowe (od najmniejszej wagi lub od największej)
 
 ### Contribution guidelines ###
 
