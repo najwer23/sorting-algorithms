@@ -1,4 +1,5 @@
 // Sorotwanie towarow po wadze.
+// Od najmiejszej lub od najwiekszej. warto nie uruchamiac dwoch sortowan dla duzej liczby produktow
 // Towar posiada id, wage i nazwe.
 // Sortowanie glupie babelkowe.
 // Jest zlym algorytmem sortujacym, ale wartym uwagi
@@ -27,7 +28,7 @@ public:
     ~Product();
     void load(int tag);
     void show();
-    friend void stupidSort(vector <Product>& products);
+    friend void stupidSort(vector <Product>& products, string howToSort);
 };
 
 // zastanowic sie nad przeciazeniem operatora wysw.
@@ -64,16 +65,35 @@ Product::~Product()
 }
 
 // funkcja zaprzyjazniona pozwala korzystac z pol klasy Product
-void stupidSort(vector <Product>& products)
+void stupidSort(vector <Product>& products, string howToSort)
 {
     for( int i=0; i<products.size(); i++ )
     {
-        if(products[i].weight>products[i+1].weight)
+        //od najmniejszej wagi do najwiekszej
+        if(howToSort=="down")
         {
-            swap(products[i],products[i+1]);
-            // tutaj warto wiedziec kiedy inkrementuje for
-            i=-1;
+            if(products[i].weight>products[i+1].weight)
+            {
+                swap(products[i],products[i+1]);
+                // tutaj warto wiedziec kiedy inkrementuje for
+                i=-1;
+            }
         }
+
+        //od najwiekszej wagi do najmniejszej
+        if(howToSort=="up")
+        {
+            if(i!=products.size()-1)
+            {
+                if(products[i].weight<products[i+1].weight)
+                {
+                    swap(products[i],products[i+1]);
+                    i=-1;
+                }
+            }
+
+        }
+
 
     }
 
@@ -88,7 +108,7 @@ int main()
     vector <Product> products;
     // ile produktow
     // dla 2000 towarow okolo 5s
-    int N=2000;
+    int N=5;
 
     // wczytaj produkty do vectora
     for (int i=0; i<N; i++ )
@@ -98,18 +118,29 @@ int main()
         products.push_back(product);
     }
 
+
     cout<<"Produkty przed sortowaniem po wadze:"<<endl;
-    // wyswietl produkty
     for( int i=0; i<products.size(); i++ )
     {
         products[i].show();
     }
 
-    // SORTOWANIE
-    stupidSort(products);
+    // SORTOWANIE od najmniejszej wagi do najwiekszej
+    string howToSort="down";
+    stupidSort(products, howToSort);
 
     cout<<endl<<"Produkty po sortowaniem po wadze (od najmniejszej):"<<endl;
-    // wyswietl produkty
+    for( int i=0; i<products.size(); i++ )
+    {
+        products[i].show();
+    }
+
+
+    // SORTOWANIE od najwiekszej do najmniejszej
+    howToSort="up";
+    stupidSort(products, howToSort);
+
+    cout<<endl<<"Produkty po sortowaniem po wadze (od najwiekszej):"<<endl;
     for( int i=0; i<products.size(); i++ )
     {
         products[i].show();
