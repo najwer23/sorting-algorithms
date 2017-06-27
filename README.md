@@ -5,7 +5,7 @@ Kompilator c++, standard minimum c++11
 Repozytorium o sortowaniu
 
 ### How do I get set up? ###
-Mamy klasę Product, która zawiera 3 pola klasy: id, waga, nazwa
+Mamy klasę Product, która zawiera 3 pola klasy: id, waga, nazwa.
 Celem jest zbadanie działania różnych algorytmów sortowania.
 
 Zbadane algorytmy:
