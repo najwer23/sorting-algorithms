@@ -14,7 +14,7 @@ Zbadane algorytmy:
 
 2. "Sortowanie bąbelkowe" (od najmniejszej wagi lub od największej)
 
-3. "Dwukierunkowe sortowanie bąbelkowe (od najmniejszej wagi lub od największej)
+3. "Dwukierunkowe sortowanie bąbelkowe" (od najmniejszej wagi lub od największej)
 
 ### Contribution guidelines ###
 
@@ -24,7 +24,7 @@ Zbadane algorytmy:
 
 2. "Sortowanie bąbelkowe" dla 2000 towarów - <1s, dla 5000 towarów - 2s,  dla 10000 towarów - 7s
 
-3. "Sortowanie dwukierunkowe bąbelkowe" dla 5000 towarów - 1s, dla 10000 towarów 2s, dla 50000 - 46s, dla 100000 +180s.
+3. "Sortowanie dwukierunkowe bąbelkowe" dla 5000 towarów - 1s, dla 10000 towarów 2s, dla 50000 - 46s, dla 100000 +180s
 
 ### Who do I talk to? ###
 :)
