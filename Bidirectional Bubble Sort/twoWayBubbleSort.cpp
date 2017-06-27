@@ -1,8 +1,7 @@
 // Sorotwanie towarow po wadze.
 // Od najmiejszej lub od najwiekszej. warto nie uruchamiac dwoch sortowan dla duzej liczby produktow
 // Towar posiada id, wage i nazwe.
-// Sortowanie glupie babelkowe.
-// Jest zlym algorytmem sortujacym powy¿ej 5000 produktów
+// Koktajlowe sortowanie
 // optymistycznie O(n), pesymistycznie O(n^2)
 
 //DZIALANIE
