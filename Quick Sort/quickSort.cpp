@@ -143,6 +143,10 @@ int main()
     // dla 1000000 1s
     // dla 5000000 2s
     // dla 10000000 6s
+<<<<<<< HEAD
+=======
+
+>>>>>>> c119e375b4863e82f8f3d3ba59ea40fd45c71f22
     int N=5;
 
     // wczytaj produkty do vectora
