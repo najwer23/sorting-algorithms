@@ -1,6 +1,7 @@
 // Sorotwanie towarow po wadze.
 // Od najmiejszej lub od najwiekszej. warto nie uruchamiac dwoch sortowan dla duzej liczby produktow
 // Towar posiada id, wage i nazwe.
+// HeapSort
 
 #include <iostream>
 #include <vector>
@@ -200,11 +201,9 @@ int main()
         products[i].show();
     }
 
-     cout<<"a";
     // SORTOWANIE od najmniejszej wagi do najwiekszej
     string howToSort="down";
     heapSort(products, howToSort);
-
 
     cout<<endl<<"Produkty po sortowaniem po wadze (od najmniejszej):"<<endl;
     for( int i=0; i<products.size(); i++ )
