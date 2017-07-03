@@ -143,8 +143,6 @@ int main()
     // dla 1000000 1s
     // dla 5000000 2s
     // dla 10000000 6s
-
-    // dla 50000 +100s wylaczylem po 100s.
     int N=5;
 
     // wczytaj produkty do vectora
