@@ -18,7 +18,7 @@ Zbadane algorytmy:
 
 4. "Quick Sort" (od najmniejszej wagi lub od największej)
 
-5. "Heap Sort"
+5. "Heap Sort" (od najmniejszej wagi lub od największej)
 
 ### Contribution guidelines ###
 
