@@ -2,6 +2,7 @@
 // Od najmiejszej lub od najwiekszej. warto nie uruchamiac dwoch sortowan dla duzej liczby produktow
 // Towar posiada id, wage i nazwe.
 
+// WAZNE dla nieskomplikowanych zastosowan sortowanie przez wybieranie jest najlepszym wyborem
 #include <iostream>
 #include <vector>
 #include <cstdlib>
@@ -22,7 +23,7 @@ public:
     ~Product();
     void load(int tag);
     void show();
-    friend void insertionSort(vector <Product>& products, string howToSort);
+    friend void selectionSort(vector <Product>& products, string howToSort);
 };
 
 // zastanowic sie nad przeciazeniem operatora wysw.
@@ -59,21 +60,51 @@ Product::~Product()
 }
 
 // funkcja zaprzyjazniona pozwala korzystac z pol klasy Product
-void insertionSort(vector <Product>& products, string howToSort)
+// dla coraz mniejszych fragmentow tablicy znajdz element najmnijeszy
+// i zamien go z pierwszym elementem rozpatrywanwgo fragmentu
+void selectionSort(vector <Product>& products, string howToSort)
 {
-    Product saveElement;
-    int i=1;
+
+    int i=0;
     int j;
-    int k;
-    //od najmniejszej wagi do najwiekszej
+    int minPosition;
+    // od najmniejszej wagi do najwiekszej
     if(howToSort=="down")
     {
-
+        while(i<products.size()-1)
+        {
+            minPosition=i;
+            j=i+1;
+            while(j<=products.size()-1)
+            {
+                if(products[j].weight<products[minPosition].weight)
+                    minPosition=j;
+                j++;
+            }
+            // zamiana minimalnego z pierwszym
+            if(minPosition!=i)
+                swap(products[i],products[minPosition]);
+            i++;
+        }
     }
 
     if(howToSort=="up")
     {
-
+        while(i<products.size()-1)
+        {
+            minPosition=i;
+            j=i+1;
+            while(j<=products.size()-1)
+            {
+                if(products[j].weight>products[minPosition].weight)
+                    minPosition=j;
+                j++;
+            }
+            // zamiana minimalnego z pierwszym
+            if(minPosition!=i)
+                swap(products[i],products[minPosition]);
+            i++;
+        }
     }
 }
 
@@ -104,7 +135,7 @@ int main()
 
     // SORTOWANIE od najmniejszej wagi do najwiekszej
     string howToSort="down";
-    insertionSort(products, howToSort);
+    selectionSort(products, howToSort);
 
     cout<<endl<<"Produkty po sortowaniem po wadze (od najmniejszej):"<<endl;
     for( int i=0; i<products.size(); i++ )
@@ -115,7 +146,7 @@ int main()
 
     // SORTOWANIE od najwiekszej do najmniejszej
     howToSort="up";
-    insertionSort(products, howToSort);
+    selectionSort(products, howToSort);
 
     cout<<endl<<"Produkty po sortowaniem po wadze (od najwiekszej):"<<endl;
     for( int i=0; i<products.size(); i++ )
