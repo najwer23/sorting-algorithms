@@ -24,6 +24,8 @@ Zbadane algorytmy:
 
 7. "Selection Sort" (od najmniejszej wagi lub od największej)
 
+8. "Shell Sort" (od najmniejszej wagi lub od największej)
+
 ### Contribution guidelines ###
 
 [Dział do rozbudowy]
@@ -41,6 +43,8 @@ Zbadane algorytmy:
 6. "Insertion Sort"
 
 7. "Selection Sort"
+
+8. "Shell Sort"
 
 ### Who do I talk to? ###
 :)
