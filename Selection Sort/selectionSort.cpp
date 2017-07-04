@@ -68,50 +68,12 @@ void insertionSort(vector <Product>& products, string howToSort)
     //od najmniejszej wagi do najwiekszej
     if(howToSort=="down")
     {
-        while(i<=products.size()-1)
-        {
-            j=0;
-            while(products[j].weight<products[i].weight)
-                j++;
 
-            //zapamietaj miejsce wstawianego
-            saveElement=products[i];
-
-            //przepycham wieksze
-            k=i-1;
-            while(k>=j)
-            {
-                products[k+1]=products[k];
-                k--;
-            }
-            //wstaw
-            products[j]=saveElement;
-            i++;
-        }
     }
 
     if(howToSort=="up")
     {
-        while(i<=products.size()-1)
-        {
-            j=0;
-            while(products[j].weight>products[i].weight)
-                j++;
 
-            //zapamietaj miejsce wstawianego
-            saveElement=products[i];
-
-            //przepycham wieksze
-            k=i-1;
-            while(k>=j)
-            {
-                products[k+1]=products[k];
-                k--;
-            }
-            //wstaw
-            products[j]=saveElement;
-            i++;
-        }
     }
 }
 
@@ -122,6 +84,7 @@ int main()
     srand(time(NULL));
     Product product;
     vector <Product> products;
+
     int N=5;
 
     // wczytaj produkty do vectora
