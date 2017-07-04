@@ -20,7 +20,9 @@ Zbadane algorytmy:
 
 5. "Heap Sort" (od najmniejszej wagi lub od największej)
 
-6. "Insertion Sort" (od najmniejszej wagi lub od największej)
+6. "Insertion Sort" (od najmniejszej wagi lub od największej) 
+
+7. "Selection Sort" (od najmniejszej wagi lub od największej)
 
 ### Contribution guidelines ###
 
@@ -37,6 +39,8 @@ Zbadane algorytmy:
 5. "Heap Sort" dla 10000000 23s
 
 6. "Insertion Sort"
+
+7. "Selection Sort"
 
 ### Who do I talk to? ###
 :)
