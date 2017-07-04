@@ -26,6 +26,8 @@ Zbadane algorytmy:
 
 8. "Shell Sort" (od najmniejszej wagi lub od największej)
 
+9. "Merge Sort" (od najmniejszej wagi lub od największej)
+
 ### Contribution guidelines ###
 
 [Dział do rozbudowy]
@@ -45,6 +47,8 @@ Zbadane algorytmy:
 7. "Selection Sort"
 
 8. "Shell Sort"
+
+9. "Merge Sort"
 
 ### Who do I talk to? ###
 :)
